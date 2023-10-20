@@ -6,6 +6,6 @@ const destinationsCtrl = require('../controllers/destinations');
 
 // Route to add a destination
 // POST /flights/:id/destinations
-router.post('/flights:id/destinations');
+router.post('/flights/:id/destinations', destinationsCtrl.create);
 
 module.exports = router;
