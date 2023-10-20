@@ -11,7 +11,7 @@ require('./config/database');
 
 var indexRouter = require('./routes/index');
 var flightsRouter = require('./routes/flights');
-
+// Creates instance of express
 var app = express();
 
 // view engine setup

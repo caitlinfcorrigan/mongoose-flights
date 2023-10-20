@@ -8,6 +8,8 @@ module.exports = {
 
 async function index(req, res) {
     const flights = await Flight.find({});
+    // This passes the view to render and the necessary data
+    // Pass the list of all variables as an object, even if it's just one
     res.render('flights/index', { flights });
 }
 
