@@ -54,21 +54,21 @@
   <br>
   <h2>Tickets</h2>
   <a href="/flights/<%= flight._id %>/tickets/new" id="new-ticket">New Ticket</a>
-  <br>
-<p>UPDATE WITH TICKET TABLE BELOW</p>
-<% if (flight.destinations.length) { %>
+  <br><br>
+<% tickets %>
+<% if (tickets) { %>
   <table>
     <thead>
       <tr>
-        <th>Destination</th>
-        <th>Arrival</th>
+        <th>Seat</th>
+        <th>Price</th>
       </tr>
     </thead>
     <tbody>
-      <% flight.destinations.forEach(function(f) { %>
+      <% tickets.forEach(function(t) { %>
         <tr>
-          <td><%= f.airport %></td>
-          <td><%= f.arrival %></td>
+          <td><%= t.seat %></td>
+          <td><%= t.price %></td>
         </tr>
       <% }); %>
     </tbody>
